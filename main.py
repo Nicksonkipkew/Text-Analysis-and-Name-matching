@@ -38,7 +38,7 @@ def find_close_matches(book_text, name):
 def find_most_frequent_words(book_text, top_n):
   tokens = word_tokenize(book_text)
   stop_words = set(stopwords.words("english"))
-  filtered_tokens = [token.lower() for token in tokens if token.isalpha() and token.lower() not in stop_words] #isalpha checks if token conatain alphabetic charactersd only.
+  filtered_tokens = [token.lower() for token in tokens if token.isalpha() and token.lower() not in stop_words] #isalpha checks if token conatains alphabetic charactersd only.
   word_freq = Counter(filtered_tokens)
   top_words = word_freq.most_common(top_n)
   print(f"Top {top_n} frequent words:")
